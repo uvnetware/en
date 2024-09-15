@@ -20,51 +20,27 @@
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            background: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text color for readability */
+            background: #121212;
+            color: #e0e0e0;
             overflow-x: hidden;
         }
 
         header {
-            background: linear-gradient(135deg, #1e1e1e, #121212); /* Gradient background */
+            background: linear-gradient(135deg, #1e1e1e, #121212);
             color: #fff;
             padding: 50px 20px;
             text-align: center;
-            border-bottom: 6px solid #6200ea; /* Material Purple underline */
+            border-bottom: 6px solid #6200ea;
             position: relative;
             overflow: hidden;
             z-index: 1;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(0, 0, 0, 0.2);
-            transform: translate(-50%, -50%) rotate(30deg);
-            z-index: 0;
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
         .logo {
             width: 200px;
             display: block;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -83,8 +59,6 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 3rem;
             margin-top: 20px;
-            position: relative;
-            z-index: 1;
             animation: fadeInUp 2s ease-in-out;
         }
 
@@ -115,38 +89,13 @@
             color: #e0e0e0;
             position: relative;
             overflow: hidden;
-            animation: slideIn 1.5s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1);
-            }
-        }
-
-        .giveaway-info::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), transparent);
-            z-index: 0;
         }
 
         .giveaway-info h2 {
-            color: #6200ea; /* Material Purple */
+            color: #6200ea;
             margin-bottom: 20px;
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            position: relative;
-            z-index: 1;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
         }
 
@@ -164,28 +113,14 @@
         }
 
         .giveaway-info li i {
-            color: #6200ea; /* Icon color */
+            color: #6200ea;
             margin-right: 15px;
             font-size: 1.5rem;
-            animation: bounceIn 1.5s ease-in-out;
-        }
-
-        @keyframes bounceIn {
-            from {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
         }
 
         .giveaway-info p {
             margin-bottom: 20px;
             font-size: 1.2rem;
-            position: relative;
-            z-index: 1;
         }
 
         .cta {
@@ -195,7 +130,7 @@
 
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #6200ea, #3700b3); /* Gradient Button */
+            background: linear-gradient(135deg, #6200ea, #3700b3);
             color: #fff;
             padding: 15px 30px;
             border-radius: 8px;
@@ -204,22 +139,6 @@
             font-size: 1.2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            }
         }
 
         .btn:hover {
@@ -233,53 +152,184 @@
         }
 
         footer {
-            background: linear-gradient(135deg, #1e1e1e, #121212); /* Gradient background */
+            background: linear-gradient(135deg, #1e1e1e, #121212);
             color: #e0e0e0;
             padding: 20px 0;
             text-align: center;
-            border-top: 6px solid #6200ea; /* Material Purple underline */
+            border-top: 6px solid #6200ea;
             position: relative;
             overflow: hidden;
             z-index: 1;
             box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
         }
 
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(0, 0, 0, 0.2);
-            transform: translate(-50%, -50%) rotate(-30deg);
-            z-index: 0;
-            animation: rotateReverse 20s linear infinite;
-        }
-
-        @keyframes rotateReverse {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            to {
-                transform: translate(-50%, -50%) rotate(-360deg);
-            }
-        }
-
         footer p {
             margin: 0;
             font-size: 1rem;
+        }
+
+        .check-results {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .check-results input {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 2px solid #6200ea;
+            background: #1e1e1e;
+            color: #fff;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .check-results button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(135deg, #6200ea, #3700b3);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .check-results button:hover {
+            background: linear-gradient(135deg, #3700b3, #6200ea);
+            transform: translateY(-3px);
+        }
+
+        .loading-bar {
+            display: none;
             position: relative;
-            z-index: 1;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .loading-bar span {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: #6200ea;
+            animation: loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+            }
+        }
+
+        /* Custom Dialog Styles */
+        .dialog-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog-content {
+            background: #1e1e1e;
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .dialog-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: #6200ea;
+        }
+
+        .dialog-content p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .dialog-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dialog-content form input, .dialog-content form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 2px solid #6200ea;
+            background: #1e1e1e;
+            color: #fff;
+        }
+
+        .dialog-content form button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(135deg, #6200ea, #3700b3);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .dialog-content form button:hover {
+            background: linear-gradient(135deg, #3700b3, #6200ea);
+            transform: translateY(-3px);
+        }
+
+        .dialog-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .dialog-close:hover {
+            background: #3700b3;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/uvnetware.appspot.com/o/UV%20Netware%20Logo.png?alt=media&token=8ab3343d-a1d5-42a0-87b7-db2a132800fd" alt="UV Netware Logo" class="logo">
-            <h1>Win ₹15,000 Cash!</h1>
-        </div>
+        <img src="https://firebasestorage.googleapis.com/v0/b/uvnetware.appspot.com/o/UV%20Netware%20Logo.png?alt=media&token=8ab3343d-a1d5-42a0-87b7-db2a132800fd" alt="UV Netware Logo" class="logo">
+        <h1>Win ₹15,000 Cash!</h1>
     </header>
 
     <main>
@@ -290,20 +340,61 @@
                 <li><i class="fas fa-share"></i> Share the reel with 3 of your friends on Instagram.</li>
                 <li><i class="fas fa-user-plus"></i> Follow us on Instagram.</li>
             </ul>
-            <p><strong>Giveaway Result Announcement:</strong> 15th September 2024 at 3:00 PM IST.</p>
+            <p><strong>Giveaway Result Announced:</strong> Check Below</p>
             <p>Stay tuned for updates and new giveaways by following us on Instagram. Keep following <a href="https://www.instagram.com/uvnetware/" target="_blank" style="color: #6200ea; text-decoration: underline;">@uvnetware</a> for more information!</p>
         </section>
 
-        <section class="cta">
-            <a href="https://www.instagram.com/uvnetware/" class="btn" target="_blank">Follow Us on Instagram</a>
-            <p>Visit our main website: <a href="https://uvnetware.com" target="_blank" style="color: #6200ea; text-decoration: underline;">uvnetware.com</a></p>
+        <section class="cta check-results">
+            <input type="text" id="username" placeholder="Enter Instagram Username" />
+            <button id="checkResults">Check Results</button>
+            <div class="loading-bar"><span></span></div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 UV Netware. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 UV Netware. All rights reserved.</p>
     </footer>
+
+    <!-- Custom Dialog -->
+    <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog-content">
+            <button class="dialog-close" id="dialogClose">&times;</button>
+            <h3>Better Luck Next Time!</h3>
+            <p>It looks like you might have been missed. Don't worry, we have more exciting giveaways coming up, including the new Nothing Phone S. Stay tuned and keep participating!</p>
+            <p>We value your feedback and suggestions. Please let us know how we can improve your experience:</p>
+            <form id="feedbackForm">
+                <input type="text" id="feedbackName" placeholder="Your Name" required />
+                <textarea id="feedbackMessage" rows="4" placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('checkResults').addEventListener('click', function() {
+            const usernameInput = document.getElementById('username');
+            const usernamePattern = /^@[a-zA-Z0-9._]+$/;
+
+            if (usernamePattern.test(usernameInput.value)) {
+                document.querySelector('.loading-bar').style.display = 'block';
+                setTimeout(() => {
+                    document.querySelector('.loading-bar').style.display = 'none';
+                    document.getElementById('dialogOverlay').style.display = 'flex';
+                }, 2000); // Simulate loading time
+            } else {
+                alert('Please enter a valid Instagram username starting with @');
+            }
+        });
+
+        document.getElementById('dialogClose').addEventListener('click', function() {
+            document.getElementById('dialogOverlay').style.display = 'none';
+        });
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your feedback!');
+            document.getElementById('dialogOverlay').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
